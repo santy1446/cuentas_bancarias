@@ -10,6 +10,9 @@ from rest_framework.permissions import IsAuthenticated
 
 # Create your views here.
 # 
+def home(request):
+
+    return render (request,"home.html")
 
 class AccountAPI(generics.ListAPIView):
 

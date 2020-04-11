@@ -4,9 +4,10 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework.authtoken import views
-from cuentas.views import AccountAPI, StateAccountAPI, TypeAccountAPI, BalanceAPI, MovementAPI, CategoryAPI
+from cuentas.views import AccountAPI, StateAccountAPI, TypeAccountAPI, BalanceAPI, MovementAPI, CategoryAPI, home
 
 urlpatterns = [
+    path('', home, name=""),
     path('admin/', admin.site.urls),
     path('account/', AccountAPI.as_view(), name = "account"),
     path('account/<int:pk>', AccountAPI.as_view(), name = "account"),
