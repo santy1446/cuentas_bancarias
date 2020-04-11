@@ -1,0 +1,1 @@
+web: gunicorn cuentas_bancarias.wsgi --log-file -
